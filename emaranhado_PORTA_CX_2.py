@@ -10,11 +10,11 @@ from qiskit.quantum_info import Statevector
 
 # Let's create a fresh quantum circuit
 qc = QuantumCircuit(2)
-qc.h(1) # aplica porta Hadamard ao segundo qubit
+qc.h(1) # aplica porta Hadamard ao segundo qubit (q1)
 ket = Statevector(qc)
 print(ket.draw())
-qc.draw('mpl')
-plt.show()
+# qc.draw('mpl')
+# plt.show()
 
 # Aplica porta CX (Cnot) no primeiro qubit (q0)
 # Nada acontece pois o qubit de controle  é 0 : |00>
@@ -22,7 +22,7 @@ plt.show()
 # ket = Statevector(qc)
 # print(ket.draw())
 # qc.draw('mpl')
-plt.show()
+# plt.show()
 
 # Aplica porta CX (Cnot) no segundo qubit (q1) para emaranhar o estado.
 # como o qbit de controle é 1 ele troca o qbit alvo(target) : |10> => |11>
@@ -30,4 +30,5 @@ qc.cx(1,0)
 ket = Statevector(qc)
 print(ket.draw())
 qc.draw('mpl')
-plt.show()
+# plt.show(block=False)
+plt.pause(interval=1.0) # Pltar oc paus antes de terminar
