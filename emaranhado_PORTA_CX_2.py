@@ -28,7 +28,7 @@ print(ket.draw())
 # como o qbit de controle é 1 ele troca o qbit alvo(target) : |10> => |11>
 qc.cx(1,0)
 ket = Statevector(qc)
-print(ket.draw())
+#print(ket.draw())
 qc.draw('mpl')
 # plt.show(block=False)
 plt.pause(interval=1.0) # Pltar oc paus antes de terminar
